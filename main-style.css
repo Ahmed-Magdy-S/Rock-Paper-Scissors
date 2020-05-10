@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 2.3rem;
+  text-transform: capitalize;
+}
+
+P {
+  font-size: 1.6rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon-box__play {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  transition: 0.3s;
+  display: block;
+}
+.icon-box__play:hover {
+  background-color: black;
+}
+.icon-box__play svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  transition: fill 0.3s;
+  fill: black;
+}
+.icon-box__play:hover svg {
+  fill: white;
+}
+
+.header {
+  height: 70vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("img/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 4rem;
+  text-align: center;
+}
+.header__description h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+
+.header__play {
+  margin: 0 auto;
+}
+
+.header__play--standard {
+  display: flex;
+  align-items: center;
+}
+.header__play--standard-icon {
+  margin-right: 1rem;
+}
+.header__play--standard-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-game {
+  padding: 5rem 4rem;
+  position: relative;
+  background-color: black;
+  color: white;
+  height: 50rem;
+  text-align: center;
+}
+
+.main-game {
+  display: flex;
+  margin: 3rem 0;
+}
+
+.main-game > div {
+  width: 33.333333%;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=main-style.css.map */

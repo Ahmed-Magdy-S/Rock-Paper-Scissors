@@ -1,0 +1,18 @@
+.section-game {
+    padding: 5rem $padding-side;
+    position: relative;
+    background-color: $color-black;
+    color: $color-white;
+    height: 50rem; //for testing
+    text-align: center;
+}
+
+.main-game {
+    display: flex;
+    margin: 3rem 0;
+}
+
+.main-game > div {
+    width: 33.333333%;
+    flex-direction: column;
+}

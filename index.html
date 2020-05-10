@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main-style.css ">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__description">
+            <h1>Rock, Paper, Scissors</h1>
+            <p>Satisfy your curiosity and find out how our AI works by playing against AZ Project.</p>
+        </div>
+        <div class="header__play">
+            <div class="header__play--standard">
+                <a class="header__play--standard-icon icon-box__play" href="#section-game">
+
+                    <svg viewBox='0 0 512 512'>
+                        <use href="icons/caret-forward-outline.svg#play"></use>
+                    </svg>
+                </a>
+                <div class="header__play--standard-text">
+                    <h2>play the game</h2>
+                    <p>play the standard version</p>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- End Header Section -->
+    <section class="section-game" id="section-game">
+        <h2 class="heading-round">Round (Dynamic No.)</h2>
+        <div class="main-game">
+            <div class="player-board">
+                <h3 class="player-board__win">win</h3>
+                <span class="player-board__score">dynamic score by DOM</span>
+                <div class="player-board__hand">pic choice</div>
+            </div>
+            <div class="show-board">
+                <p class="show-board__result">Dynamic by DOM, You Win You Lose Draw You Choose</p>
+                <div>
+                    <label for="round">Rounds</label>
+                    <input class="show-board__round" type="number" name="round" id="round">
+                </div>
+                <button class="show-board__btn show-board__btn--rock btn-rock">Rock</button>
+                <button class="show-board__btn show-board__btn--paper btn-paper">Paper</button>
+                <button class="show-board__btn show-board__btn--scissors btn-scissors">Scissors</button>
+            </div>
+            <div class="computer-board">
+                <h3 class="computer-board__win">win</h3>
+                <span class="computer-board__score">dynamic score by DOM</span>
+                <div class="computer-board__hand">pic choice</div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

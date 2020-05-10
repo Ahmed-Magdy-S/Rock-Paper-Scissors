@@ -1,0 +1,11 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "It's a project game of The Odin Project",
+  "main": "app.js",
+  "scripts": {
+    "sass-watch": "sass sass/main-sass.scss main-style.css --watch"
+  },
+  "author": "Ahmed Magdy Seleem",
+  "license": "ISC"
+}

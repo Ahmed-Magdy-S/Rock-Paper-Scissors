@@ -1,0 +1,30 @@
+.icon-box__play {
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    transition: .3s;
+    display: block;
+
+    &:hover {
+        background-color: $color-black;
+    }
+
+    svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s;
+        transition: fill .3s;
+        fill: $color-black;
+    }
+
+    &:hover svg {
+        fill: $color-white;
+
+    }
+}
