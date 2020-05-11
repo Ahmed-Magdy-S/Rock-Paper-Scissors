@@ -1,41 +1,35 @@
 .header {
-    height: 70vh;
-    background-image: linear-gradient(rgba($color-white, .6), rgba($color-white, .6)),
-        url("img/header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom bottom;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 $padding-side;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    padding: 7rem $padding-side;
     text-align: center;
+    border-bottom: 1px solid #fff;
+
+
 
     &__description {
+        margin-bottom: 7rem;
 
         h1 {
-            margin-bottom: 1rem;
-            font-size: 4rem;
+            color: $accent-color;
+            margin-bottom: 1.5rem;
         }
-
     }
-
-}
-.header__play {
-    margin: 0 auto;
 }
 
 .header__play--standard {
     display: flex;
     align-items: center;
-
-    &-icon {
-        margin-right: 1rem;
-    }
+    justify-content: center;
+    text-transform: capitalize;
 
     &-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 2rem 3rem;
+
+        h2 {
+            color: $accent-color;
+        }
     }
 }

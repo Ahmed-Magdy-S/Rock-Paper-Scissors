@@ -13,56 +13,51 @@ let playerSelection;
 let computerSelection;
 let playerPoints = 0;
 let computerPoints = 0;
+let drawPoints = 0;
+let rounds = 0
 //Play Round Function
 function playRound(playerSelection, computerSelection) {
     let win;
     if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
-        win = `You win You Choose ${playerSelection} that beats ${computerSelection}`
+        win = `You win`
         playerPoints++;
+        document.querySelector(".show-board__result").style.color = "#16b122";
+    } else if (playerSelection === computerSelection) {
+        win = `Draw`
+        drawPoints++;
+        document.querySelector(".show-board__result").style.color = "rgb(210, 194, 2)";
+    } else {
+        win = `Computer win`;
+        computerPoints++;
+        document.querySelector(".show-board__result").style.color = "#be3144";
     }
-    else if (playerSelection === computerSelection) {
-        win = `Draw, Play Again You and Computer choose these: ${playerSelection} & ${computerSelection}`
-
-    }
-    else {
-        win = `You Lose, Computer choose ${computerSelection} that beats ${playerSelection}`
-        computerPoints++
-
-    }
-
+    document.querySelector(".computer-board__hand-p").textContent = computerSelection
+    rounds++;
     return win;
 }
-//Function Validation
-function validChoice(){
-    let choice;
-    let game;
-    do {
-        choice = prompt('Enter Your Chocie, Make sure you spell correctely', 'Rock, Paper, Scissors').toLowerCase()
-        if (choice === 'rock' || choice === "paper" || choice === "scissors" ) {
-            game = choice;
-        }
-    }
-    while (choice !== game);
-    return choice;
-} 
-//Game
+//Add DOM Manipulation
+let btnChoices = document.querySelectorAll('.show-board__btn')
 
-function game(num) {
+btnChoices.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        document.querySelector(".show-board__result").textContent = playRound(btn.value, computerPlay())
+        document.querySelector(".player-board__score").textContent = playerPoints;
+        document.querySelector(".computer-board__score").textContent = computerPoints;
+        document.querySelector(".draw-board__score").textContent = drawPoints;
+        document.querySelector(".heading-round span").textContent = rounds;
+    })
+})
 
-    for (let i = 0; i < num; i++) {
-        playerSelection = validChoice()
-        computerSelection = computerPlay();
-        alert(playRound(playerSelection, computerSelection))
-    }
-    if (playerPoints > computerPoints) {
-        return alert(`You win, you get ${playerPoints} of ${num}`)
-    }
-    else if (playerPoints === computerPoints) {
-        return alert(`Both You and Computer get ${playerPoints}: ${computerPoints}`)
-    }
-    else {
-        return alert(`You lose, you get ${playerPoints} of ${num}`)
-
-    }
-}
-//////////////////////////////////////////////////
+//Reset Button 
+document.querySelector('.show-board__btn--reset').addEventListener('click', function () {
+    document.querySelector(".show-board__result").textContent = '';
+    document.querySelector(".player-board__score").textContent = 0;
+    document.querySelector(".computer-board__score").textContent = 0;
+    document.querySelector(".draw-board__score").textContent = 0;
+    document.querySelector(".heading-round span").textContent = 0;
+    document.querySelector(".computer-board__hand-p").textContent = '';
+    playerPoints = 0;
+    computerPoints = 0;
+    drawPoints = 0;
+    rounds = 0
+})

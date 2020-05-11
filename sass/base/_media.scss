@@ -1,0 +1,61 @@
+@media (max-width: 48.75em) {
+    html {
+        font-size: 50%;
+
+    }
+
+}
+
+@media (max-width: 40em) {
+    html {
+        font-size: 40%;
+
+    }
+
+}
+
+@media (max-width: 31.25em) {
+    html {
+        font-size: 35%;
+    }
+}
+
+@media (max-width: 27.25em) {
+    html {
+        font-size: 30%;
+    }
+}
+
+@media (max-width: 23.5em) {
+    html {
+        font-size: 30%;
+    }
+
+    .section-game {
+
+        .player-board {
+            width: 50%;
+            order: 1;
+        }
+
+        .show-board {
+            width: 100%;
+        }
+
+        .computer-board {
+            width: 50%;
+            order: 2;
+        }
+    }
+}
+@media (max-width: 18.4em) {
+    html {
+        font-size: 30%;
+    }
+    .header__play--standard {
+        flex-direction: column;
+        &-text {
+            order: -1;
+        }
+    }
+}

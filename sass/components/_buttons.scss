@@ -1,0 +1,16 @@
+.show-board__btn {
+    @include button-game;
+    background: none;
+    color: #fff;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.show-board__btn--reset {
+    @include button-game;
+    background-color: #fff;
+    color: #000;
+}

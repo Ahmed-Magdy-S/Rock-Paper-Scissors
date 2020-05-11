@@ -12,12 +12,11 @@
     <header class="header">
         <div class="header__description">
             <h1>Rock, Paper, Scissors</h1>
-            <p>Satisfy your curiosity and find out how our AI works by playing against AZ Project.</p>
+            <p>Satisfy your curiosity and find out how our game works by playing against AZ Web Project CPU.</p>
         </div>
         <div class="header__play">
             <div class="header__play--standard">
                 <a class="header__play--standard-icon icon-box__play" href="#section-game">
-
                     <svg viewBox='0 0 512 512'>
                         <use href="icons/caret-forward-outline.svg#play"></use>
                     </svg>
@@ -27,37 +26,56 @@
                     <p>play the standard version</p>
                 </div>
             </div>
-
         </div>
-
     </header>
     <!-- End Header Section -->
+    <!-- Start Game Section -->
     <section class="section-game" id="section-game">
-        <h2 class="heading-round">Round (Dynamic No.)</h2>
+        <h2 class="heading-round">Round <span>0</span></h2>
         <div class="main-game">
             <div class="player-board">
-                <h3 class="player-board__win">win</h3>
-                <span class="player-board__score">dynamic score by DOM</span>
-                <div class="player-board__hand">pic choice</div>
+                <h3>Player</h3>
+                <h4 class="player-board__win">Win</h4>
+                <span class="player-board__score">0</span>
+                <div class="player-board__hand">
+                    <button value="rock" class="show-board__btn show-board__btn--rock">Rock</button>
+                    <button value="paper" class="show-board__btn show-board__btn--paper">Paper</button>
+                    <button value="scissors" class="show-board__btn show-board__btn--scissors">Scissors</button>
+                </div>
             </div>
             <div class="show-board">
-                <p class="show-board__result">Dynamic by DOM, You Win You Lose Draw You Choose</p>
-                <div>
-                    <label for="round">Rounds</label>
-                    <input class="show-board__round" type="number" name="round" id="round">
-                </div>
-                <button class="show-board__btn show-board__btn--rock btn-rock">Rock</button>
-                <button class="show-board__btn show-board__btn--paper btn-paper">Paper</button>
-                <button class="show-board__btn show-board__btn--scissors btn-scissors">Scissors</button>
+                <h3>Results</h3>
+                <h4 class="show-board--draw draw-board__win">Draw</h4>
+                <span class="draw-board__score">0</span>
+                <p class="show-board__result"></p>
             </div>
             <div class="computer-board">
-                <h3 class="computer-board__win">win</h3>
-                <span class="computer-board__score">dynamic score by DOM</span>
-                <div class="computer-board__hand">pic choice</div>
+                <h3>Computer</h3>
+                <h4 class="computer-board__win">Win</h4>
+                <span class="computer-board__score">0</span>
+                <div class="computer-board__hand">
+                    <p class="computer-board__hand-p""></p></div>
             </div>
         </div>
+        <button class="show-board__btn--reset">Reset</button>
     </section>
-    <script src="app.js"></script>
+    <!-- End Game Section  -->
+    <!-- Start Section Contact -->
+    <section class="section-contact" id="section-contact">
+        <h2>Any Suggestions ? Just Contact Us !</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/Ahmed.Magdy.S.19">Facebook</a></li>
+            <li><a href="https://wa.me/21110747880">WhatsApp</a></li>
+            <li><a href="mailto: Ahmed.Magdy.S.19@gmai.com">Send Email</a></li>
+        </ul>
+    </section>
+    <!-- End Section Contact -->
+    <footer class="footer">
+        <p>Copyright &copy; 2020 <span>AZ Web Project</span> . All rights reserved.</p>
+        <p>Developed by <span>Ahmed Magdy Seleem</span></p>
+    </footer>
+    <script src=" app.js">
+                        </script>
 </body>
 
 </html>
