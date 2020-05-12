@@ -38,9 +38,7 @@
                 <h4 class="player-board__win">Win</h4>
                 <span class="player-board__score">0</span>
                 <div class="player-board__hand">
-                    <button value="rock" class="show-board__btn show-board__btn--rock">Rock</button>
-                    <button value="paper" class="show-board__btn show-board__btn--paper">Paper</button>
-                    <button value="scissors" class="show-board__btn show-board__btn--scissors">Scissors</button>
+
                 </div>
             </div>
             <div class="show-board">
@@ -53,12 +51,29 @@
                 <h3>Computer</h3>
                 <h4 class="computer-board__win">Win</h4>
                 <span class="computer-board__score">0</span>
-                <div class="computer-board__hand">
-                    <p class="computer-board__hand-p""></p></div>
+                <div class="computer-board__hand"></div>
             </div>
+        </div>
+        <div class="game-buttons">
+            <button value="rock" class="show-board__btn show-board__btn--rock">
+                <svg>
+                    <use href="icons/sprite.svg#hand-rock"></use>
+                </svg>
+            </button>
+            <button value="paper" class="show-board__btn show-board__btn--paper">
+                <svg>
+                    <use href="icons/sprite.svg#hand-paper"></use>
+                </svg>
+            </button>
+            <button value="scissors" class="show-board__btn show-board__btn--scissors">
+                <svg>
+                    <use href="icons/sprite.svg#hand-scissors"></use>
+                </svg>
+            </button>
         </div>
         <button class="show-board__btn--reset">Reset</button>
     </section>
+
     <!-- End Game Section  -->
     <!-- Start Section Contact -->
     <section class="section-contact" id="section-contact">
@@ -75,7 +90,7 @@
         <p>Developed by <span>Ahmed Magdy Seleem</span></p>
     </footer>
     <script src=" app.js">
-                        </script>
+    </script>
 </body>
 
 </html>

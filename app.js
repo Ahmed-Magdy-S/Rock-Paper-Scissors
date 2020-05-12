@@ -15,6 +15,7 @@ let playerPoints = 0;
 let computerPoints = 0;
 let drawPoints = 0;
 let rounds = 0
+
 //Play Round Function
 function playRound(playerSelection, computerSelection) {
     let win;
@@ -31,7 +32,14 @@ function playRound(playerSelection, computerSelection) {
         computerPoints++;
         document.querySelector(".show-board__result").style.color = "#be3144";
     }
-    document.querySelector(".computer-board__hand-p").textContent = computerSelection
+    document.querySelector('.player-board__hand').innerHTML = `
+    <svg>
+<use href="icons/sprite.svg#hand-${playerSelection}"></use>
+</svg>`;
+    document.querySelector('.computer-board__hand').innerHTML = `
+    <svg>
+<use href="icons/sprite.svg#hand-${computerSelection}"></use>
+</svg>`;
     rounds++;
     return win;
 }
@@ -55,7 +63,9 @@ document.querySelector('.show-board__btn--reset').addEventListener('click', func
     document.querySelector(".computer-board__score").textContent = 0;
     document.querySelector(".draw-board__score").textContent = 0;
     document.querySelector(".heading-round span").textContent = 0;
-    document.querySelector(".computer-board__hand-p").textContent = '';
+    document.querySelector('.player-board__hand').innerHTML = '';
+    document.querySelector('.computer-board__hand').innerHTML = '';
+
     playerPoints = 0;
     computerPoints = 0;
     drawPoints = 0;
